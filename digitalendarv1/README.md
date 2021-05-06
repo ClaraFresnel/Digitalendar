@@ -1,4 +1,4 @@
-# dayspan-vuetify-example
+# Digitalendar
 
 ## Project setup
 ```

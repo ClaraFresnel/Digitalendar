@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <img alt="CalendarRé logo" src="../assets/logo.png" />
+    <HelloWorld msg="Welcome to Your CalendarRé" />
   </div>
 </template>
 
@@ -16,3 +16,17 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+.home{
+  margin-top: 120px;
+  text-align: center;
+}
+
+</style>

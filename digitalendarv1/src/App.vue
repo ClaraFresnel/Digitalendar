@@ -6,7 +6,8 @@
       :read-only="readOnly"
       @change="saveState"
     >
-      <template slot="title"> Digitalendar </template>
+    <link rel="icon" href="<%= BASE_URL %>logo.ico">
+      <template slot="title"> CalendarRé </template>
 
       <template slot="eventPopover" slot-scope="slotData">
         <ds-calendar-event-popover
@@ -48,10 +49,16 @@
 
       <template slot="drawerBottom">
         <div class="pa-3">
-          <v-checkbox label="Read Only?" v-model="readOnly"></v-checkbox>
-
-          <router-link to="/">Home</router-link> |<br>
-          <router-link to="/about">About</router-link>
+          <section id="bottom1">
+            <router-link class="router-link" to="/Sport">Sport</router-link> 
+            <router-link class="router-link" to="/actualité">Actualité</router-link> 
+            <router-link class="router-link" to="/crypto">Cryptomonnaie</router-link>
+          </section>
+          <section id="bottom2">
+            <router-link class="router-link" to="/météo">Météo</router-link> 
+            <router-link class="router-link" to="/horoscope">Horoscope</router-link> 
+            <router-link class="router-link" to="/film_Série">Film/Série</router-link> 
+          </section>
           <router-view />
           
         </div>
@@ -74,19 +81,7 @@ export default {
     defaultEvents: [
       {
         data: {
-          title: "Weekly Meeting",
-          color: "#3F51B5",
-        },
-        schedule: {
-          dayOfWeek: [Weekday.MONDAY],
-          times: [9],
-          duration: 30,
-          durationUnit: "minutes",
-        },
-      },
-      {
-        data: {
-          title: "First Weekend",
+          title: "Premier week-end",
           color: "#4CAF50",
         },
         schedule: {
@@ -98,7 +93,7 @@ export default {
       },
       {
         data: {
-          title: "End of Month",
+          title: "Fin du mois",
           color: "#000000",
         },
         schedule: {
@@ -109,7 +104,7 @@ export default {
       },
       {
         data: {
-          title: "Mother's Day",
+          title: "Fête des mères",
           color: "#2196F3",
           calendar: "US Holidays",
         },
@@ -121,7 +116,7 @@ export default {
       },
       {
         data: {
-          title: "New Year's Day",
+          title: "Nouvel an",
           color: "#2196F3",
           calendar: "US Holidays",
         },
@@ -143,7 +138,7 @@ export default {
       },
       {
         data: {
-          title: "Martin Luther King, Jr. Day",
+          title: "Journée Martin Luther King Jr",
           color: "#2196F3",
           calendar: "US Holidays",
         },
@@ -155,7 +150,7 @@ export default {
       },
       {
         data: {
-          title: "George Washington's Birthday",
+          title: "Anniversaire de Geaorge Washington",
           color: "#2196F3",
           calendar: "US Holidays",
         },
@@ -167,7 +162,7 @@ export default {
       },
       {
         data: {
-          title: "Memorial Day",
+          title: "jour des Morts au champ d'honneur",
           color: "#2196F3",
           calendar: "US Holidays",
         },
@@ -179,7 +174,7 @@ export default {
       },
       {
         data: {
-          title: "Independence Day",
+          title: "Jour de l'indépendance",
           color: "#2196F3",
           calendar: "US Holidays",
         },
@@ -190,7 +185,7 @@ export default {
       },
       {
         data: {
-          title: "Labor Day",
+          title: "Fête du travail",
           color: "#2196F3",
           calendar: "US Holidays",
         },
@@ -202,7 +197,7 @@ export default {
       },
       {
         data: {
-          title: "Columbus Day",
+          title: "Jour de Christophe Colomb",
           color: "#2196F3",
           calendar: "US Holidays",
         },
@@ -214,7 +209,7 @@ export default {
       },
       {
         data: {
-          title: "Veterans Day",
+          title: "Journée des anciens combattants",
           color: "#2196F3",
           calendar: "US Holidays",
         },
@@ -225,7 +220,7 @@ export default {
       },
       {
         data: {
-          title: "Thanksgiving Day",
+          title: "Halloween",
           color: "#2196F3",
           calendar: "US Holidays",
         },
@@ -237,7 +232,7 @@ export default {
       },
       {
         data: {
-          title: "Christmas Day",
+          title: "Noël",
           color: "#2196F3",
           calendar: "US Holidays",
         },
@@ -326,4 +321,44 @@ html,
   background-color: #f5f5f5 !important;
   margin-bottom: 8px !important;
 }
+
+#bottom1{
+  padding: 10px;
+  text-align: left;
+}
+#bottom2{
+  padding: 10px;
+  text-align: left;
+}
+.router-link{
+  color: #a6a6a6;
+  margin-right: 10px;
+  border: solid 1px;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 1px;
+  width: 200px;
+  }
+
+.router-link:hover{
+  color: #4285f4;
+  margin-right: 10px;
+  border: solid 1px;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 1px;
+  outline: none;
+  }
+
+  .router-link:focus{
+  color: #4285f4;
+  margin-right: 10px;
+  border: solid 1px;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 1px;
+  outline: none;
+  }
+
+
 </style>
